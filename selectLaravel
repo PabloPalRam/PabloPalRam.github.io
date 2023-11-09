@@ -1,0 +1,13 @@
+$selectedCountry = "Spain"; // Establece el país predeterminado
+
+$countries = Country::where('continent', 'Europe')->get();
+
+//compact crea un array asociativo con esas dos variables
+return view('vista_select', compact('countries', 'selectedCountry'));
+
+$selectedProvince = "Granada"; // Establece la provincia predeterminado
+
+$provinces = Province::where('spain', 'andalucia')->get();
+
+//compact crea un array asociativo con esas dos variables
+return view('vista_select', compact('provinces', 'selectedProvince'));
